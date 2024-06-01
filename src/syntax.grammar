@@ -1,0 +1,39 @@
+@top Program { line* }
+
+@skip { space }
+
+line { empty | expr }
+
+empty { nl }
+
+expr { (comment | Rule | step) ( nl | eof ) }
+
+comment { LineComment }
+
+Rule { Target+ ":" Component* }
+
+Target { identifier }
+
+Component { identifier }
+
+step { tab Command }
+
+@tokens {
+  Command { ![\n]+ }
+
+  identifier { ![$: \t\n#]+ }
+
+  LineComment { "#" ![\n]* }
+
+  tab { "\t" }
+
+  nl { "\n" }
+
+  eof { @eof }
+
+  space { $[ ]+ }
+
+  @precedence { LineComment, Command, space }
+}
+
+//@detectDelim

@@ -1,0 +1,48 @@
+# Empty program
+
+
+==>
+Program()
+
+# Comments
+
+# test
+# test line 2
+# test3
+
+==>
+Program(LineComment, LineComment, LineComment)
+
+# Single rule
+
+target1: component1
+
+==>
+Program(Rule(Target, Component))
+
+# Empty lines
+
+target1: component1
+
+target2: component2
+
+==>
+Program(Rule(Target, Component),
+        Rule(Target, Component))
+
+# Step
+
+# why does parse fail when this comment is removed?
+	gcc main.c
+
+==>
+Program(LineComment, Command)
+
+# Commands
+
+target3: component3
+	gcc main.c
+
+==>
+Program(Rule(Target, Component),
+        Command)
