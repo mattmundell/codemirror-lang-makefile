@@ -6,6 +6,10 @@
     "test": "mocha test/test.js",
     "prepare": "rollup -c"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://git.sr.ht/~mattmundell/codemirror-lang-makefile"
+  },
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
