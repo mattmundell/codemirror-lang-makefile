@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-makefile",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Makefile language support for CodeMirror",
   "homepage": "https://git.sr.ht/~mattmundell/codemirror-lang-makefile",
   "scripts": {
