@@ -2,6 +2,7 @@
   "name": "codemirror-lang-makefile",
   "version": "0.1.0",
   "description": "Makefile language support for CodeMirror",
+  "homepage": "https://git.sr.ht/~mattmundell/codemirror-lang-makefile",
   "scripts": {
     "test": "mocha test/test.js",
     "prepare": "rollup -c"
